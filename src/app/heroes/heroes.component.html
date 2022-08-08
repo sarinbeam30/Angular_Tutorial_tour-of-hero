@@ -17,13 +17,15 @@
 <!-- [*ngFor] = Angular's repeater directive  (Don't forget to put the asterisk * in front of "ngFor". It's a critical part of the syntax) -->
 <!-- Angular's class binding === [class.some-css-class]="some-condition" -->
 <h2>My Heroes</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+    <a routerLink="/detail/{{ hero.id }}">
       <span class="badge">{{ hero.id }}</span>
       <span class="name">{{ hero.name }}</span>
-    </button>
+    </a>
   </li>
 </ul>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- [hero]="selectedHero" is an Angular property binding -->
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
