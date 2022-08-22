@@ -13,6 +13,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { AugularLifeCycleComponent } from './augular-life-cycle/augular-life-cycle.component';
+import { ChildComponent } from './augular-life-cycle/child/child.component';
 
 
 // The most important @NgModule decorator annotates the top-level "AppModule" class
@@ -24,7 +26,9 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    AugularLifeCycleComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
