@@ -15,6 +15,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { AugularLifeCycleComponent } from './augular-life-cycle/augular-life-cycle.component';
 import { ChildComponent } from './augular-life-cycle/child/child.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 // The most important @NgModule decorator annotates the top-level "AppModule" class
@@ -41,7 +43,13 @@ import { ChildComponent } from './augular-life-cycle/child/child.component';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+     ServiceWorkerModule.register('ngsw-worker.js', {
+       enabled: environment.production,
+       // Register the ServiceWorker as soon as the application is stable
+       // or after 30 seconds (whichever comes first).
+       registrationStrategy: 'registerWhenStable:30000'
+     })
   ],
   providers: [],
   bootstrap: [AppComponent]
