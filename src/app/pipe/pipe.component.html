@@ -1,9 +1,21 @@
 <h4>Using a pipe in a template</h4>
 <p>The hero's birthday is {{ birthday | date }}</p>
-
+<hr align="left" width="500" size="0">
 
 <h4>Transforming data with parameters and chained pipe</h4>
 <p>The hero's birthday is {{ birthday | date:"dd/MM/yy" }} </p>
 
 <p>The hero's birthday is {{ birthday | date:format }} </p>
 <button type="button" (click)="toggleFormat()">Toggle Format</button>
+<hr align="left" width="500" size="0">
+
+<h4>Example: Applying two formats by chaining pipes</h4>
+<p>The chained hero's birthday is {{ birthday | date | uppercase }}</p>
+<hr align="left" width="500" size="0">
+
+<h4>Creating pipes for custom data transformations</h4>
+<p>Power Booster</p>
+<p>Super power boost: {{ 123 | exponentialStrength: 10 }}</p>
+<hr align="left" width="500" size="0">
+
+<app-power-boost-calculator></app-power-boost-calculator>

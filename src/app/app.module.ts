@@ -18,6 +18,8 @@ import { ChildComponent } from './augular-life-cycle/child/child.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PipeComponent } from './pipe/pipe.component';
+import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { PowerBoostCalculatorComponent } from './pipe/power-boost-calculator/power-boost-calculator.component';
 
 
 // The most important @NgModule decorator annotates the top-level "AppModule" class
@@ -32,7 +34,9 @@ import { PipeComponent } from './pipe/pipe.component';
     HeroSearchComponent,
     AugularLifeCycleComponent,
     ChildComponent,
-    PipeComponent
+    PipeComponent,
+    ExponentialStrengthPipe,
+    PowerBoostCalculatorComponent
   ],
   imports: [
     BrowserModule,
