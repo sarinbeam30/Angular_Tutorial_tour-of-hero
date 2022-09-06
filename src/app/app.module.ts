@@ -17,6 +17,7 @@ import { AugularLifeCycleComponent } from './augular-life-cycle/augular-life-cyc
 import { ChildComponent } from './augular-life-cycle/child/child.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 // The most important @NgModule decorator annotates the top-level "AppModule" class
@@ -30,7 +31,8 @@ import { environment } from '../environments/environment';
     DashboardComponent,
     HeroSearchComponent,
     AugularLifeCycleComponent,
-    ChildComponent
+    ChildComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,

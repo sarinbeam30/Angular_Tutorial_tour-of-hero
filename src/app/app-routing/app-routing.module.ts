@@ -4,9 +4,12 @@ import { HeroesComponent } from '../heroes/heroes.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { AugularLifeCycleComponent } from '../augular-life-cycle/augular-life-cycle.component';
+import { PipeComponent } from '../pipe/pipe.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/angularLifeCycle', pathMatch: 'full' },
+  { path: 'pipeExperiment', component: PipeComponent },
   { path: 'angularLifeCycle', component: AugularLifeCycleComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },

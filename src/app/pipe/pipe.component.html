@@ -1,0 +1,9 @@
+<h4>Using a pipe in a template</h4>
+<p>The hero's birthday is {{ birthday | date }}</p>
+
+
+<h4>Transforming data with parameters and chained pipe</h4>
+<p>The hero's birthday is {{ birthday | date:"dd/MM/yy" }} </p>
+
+<p>The hero's birthday is {{ birthday | date:format }} </p>
+<button type="button" (click)="toggleFormat()">Toggle Format</button>
