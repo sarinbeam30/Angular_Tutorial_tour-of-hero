@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
 export class PowerBoostCalculatorComponent {
   power = 5;
   factor = 1;
-
 }

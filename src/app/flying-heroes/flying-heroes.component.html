@@ -1,0 +1,17 @@
+<h4>Create a new hero and press enter to add it to the list. </h4>
+<label for="hero-name">New hero name: </label>
+<input type="text" #box
+       id="hero-name"
+       (keyup.enter)="addHero(box.value); box.value='' "
+       placeholder="hero name">
+<button type="button" (click)="reset()">Reset list of heroes</button>
+<div *ngFor="let hero of heroes">
+  {{ hero.name }}
+</div>
+
+<h4>Hero who fly (poped)</h4>
+<div id="flyers">
+  <div *ngFor="let hero of (heroes | flyingHeroes)">
+    {{ hero.name }}
+  </div>
+</div>
