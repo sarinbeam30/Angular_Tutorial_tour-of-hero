@@ -21,7 +21,7 @@ export class AsyncPromisePipeComponent {
     this.greeting = new Promise<string>((resolve, reject) => {
       this.resolve = resolve
     })
-    // console.log('[async-promise-pipe] this.resolve : ', this.greeting);
+    console.log('[async-promise-pipe][reset] this.resolve : ', this.greeting);
   }
 
   clicked() {
@@ -33,6 +33,7 @@ export class AsyncPromisePipeComponent {
        * It says to the compiler: "As the developer, I know better than you that this variable cannot be null right now".
        */
       this.resolve!('hi there from clicked !');
+      console.log('[async-promise-pipe][clicked] this.resolve : ', this.greeting);
       this.arrived = true;
     }
   }

@@ -1,0 +1,31 @@
+<h4>{{ title }}</h4>
+
+<label for="hero-name">New hero name: </label>
+<input type="text" #box
+       id="hero-name"
+       (keyup.enter)="addHero(box.value); box.value=''"
+       placeholder="hero name [flying-heroes-impure.component]">
+
+<div>
+  <input id="can-fly" type="checkbox" [(ngModel)]="canFly">
+  <label for="can-fly">Hero can fly [flying-heroes-impure.component]</label>
+</div>
+
+<div>
+  <input id="mutate" type="checkbox" [(ngModel)]="mutate">Mutate array [flying-heroes-impure.component]
+  <button type="button" (click)="reset()">Reset list of heroes [flying-heroes-impure.component]</button>
+</div>
+
+<h5>Hero who fly (piped) (Impure)</h5>
+<div id="flyers">
+  <div *ngFor="let hero of (heroes | flyingHeroesImpure)">
+    {{ hero.name }}
+  </div>
+</div>
+
+<h5>All Heroes (no pipe)</h5>
+<div id="all">
+  <div *ngFor="let hero of heroes">
+    {{ hero.name }}
+  </div>
+</div>

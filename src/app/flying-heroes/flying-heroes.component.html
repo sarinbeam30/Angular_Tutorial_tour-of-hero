@@ -1,17 +1,32 @@
-<h4>Create a new hero and press enter to add it to the list. </h4>
+<h4>{{ title }}</h4>
+<p>Create a new hero and press enter to add it to the list. </p>
 <label for="hero-name">New hero name: </label>
 <input type="text" #box
        id="hero-name"
-       (keyup.enter)="addHero(box.value); box.value='' "
-       placeholder="hero name">
-<button type="button" (click)="reset()">Reset list of heroes</button>
-<div *ngFor="let hero of heroes">
-  {{ hero.name }}
+       (keyup.enter)="addHero(box.value); box.value=''"
+       placeholder="hero name [flying-heroes.component]">
+<div>
+  <input id="can-fly" type="checkbox" [(ngModel)]="canFly">
+  <label for="can-fly">Hero can fly [flying-heroes.component]</label>
 </div>
 
-<h4>Hero who fly (poped)</h4>
+<div>
+  <input id="mutate" type="checkbox" [(ngModel)]="mutate">
+  <label for="mutate">Mutate array [flying-heroes.component]</label>
+  <button type="button" (click)="reset()">Reset list of heroes [flying-heroes.component]</button>
+</div>
+
+
+<h5>Hero who fly (piped) (Pure)</h5>
 <div id="flyers">
   <div *ngFor="let hero of (heroes | flyingHeroes)">
+    {{ hero.name }}
+  </div>
+</div>
+
+<h5>All Heroes (no pipe)</h5>
+<div id="all">
+  <div *ngFor="let hero of heroes">
     {{ hero.name }}
   </div>
 </div>

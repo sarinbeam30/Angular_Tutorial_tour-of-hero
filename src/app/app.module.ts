@@ -20,9 +20,10 @@ import { environment } from '../environments/environment';
 import { PipeComponent } from './pipe/pipe.component';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { PowerBoostCalculatorComponent } from './pipe/power-boost-calculator/power-boost-calculator.component';
-import { FlyingHeroesComponent } from './flying-heroes/flying-heroes.component';
+import { FlyingHeroesComponent, FlyingHeroesImpureComponent } from './flying-heroes/flying-heroes.component';
+
 import { AsyncPromisePipeComponent } from './pipe/async-promise-pipe/async-promise-pipe.component';
-import { FlyingHeroesPipe } from './flying-heroes.pipe';
+import { FlyingHeroesPipe, FlyingHeroesImpurePipe } from './flying-heroes.pipe';
 
 
 // The most important @NgModule decorator annotates the top-level "AppModule" class
@@ -40,9 +41,11 @@ import { FlyingHeroesPipe } from './flying-heroes.pipe';
     PipeComponent,
     PowerBoostCalculatorComponent,
     FlyingHeroesComponent,
+    FlyingHeroesImpureComponent,
     AsyncPromisePipeComponent,
     ExponentialStrengthPipe,
-    FlyingHeroesPipe
+    FlyingHeroesPipe,
+    FlyingHeroesImpurePipe
   ],
   imports: [
     BrowserModule,
