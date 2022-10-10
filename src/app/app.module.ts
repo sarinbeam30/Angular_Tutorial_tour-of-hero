@@ -24,6 +24,7 @@ import { FlyingHeroesComponent, FlyingHeroesImpureComponent } from './flying-her
 
 import { AsyncPromisePipeComponent } from './pipe/async-promise-pipe/async-promise-pipe.component';
 import { FlyingHeroesPipe, FlyingHeroesImpurePipe } from './flying-heroes.pipe';
+import { HeroAsyncMessageComponent } from './hero-async-message/hero-async-message.component';
 
 
 // The most important @NgModule decorator annotates the top-level "AppModule" class
@@ -45,7 +46,8 @@ import { FlyingHeroesPipe, FlyingHeroesImpurePipe } from './flying-heroes.pipe';
     AsyncPromisePipeComponent,
     ExponentialStrengthPipe,
     FlyingHeroesPipe,
-    FlyingHeroesImpurePipe
+    FlyingHeroesImpurePipe,
+    HeroAsyncMessageComponent
   ],
   imports: [
     BrowserModule,
